@@ -46,7 +46,6 @@ function clickHandler(event) {
       evaluateQueue(executionQueue);
     }
 
-    console.log(executionQueue);
     updateDisplay();
 
     return;
@@ -224,7 +223,7 @@ function isValidKey(key) {
   return key === 'Enter' || 
          key === 'Backspace' || 
          key === 'Escape' ||
-         /[\d\.+\-x*/()=]/.test(key);
+         /^[\d\.+\-x*/()=]$/.test(key);
 }
 
 function adaptKey(key) {
